@@ -262,30 +262,57 @@ p { margin: 0 0 1em; color: var(--ink-soft); }
 .section-lead { color: var(--ink-soft); font-size: 1.05rem; }
 
 /* ---------- About ---------- */
+/* ---------- Modifiche Sezione Chi Siamo (About + Instagram) ---------- */
+
+/* Riduciamo il padding verticale della sezione per renderla meno alta */
+.section.about {
+  padding: 50px 0; /* Prima era 84px */
+}
+
+/* Griglia più larga (proporzione 1fr 1fr invece di 0.85fr 1.15fr) e gap ridotto */
 .about-grid {
   display: grid;
-  grid-template-columns: 0.85fr 1.15fr;
-  gap: 64px;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px; /* Prima era 64px */
   align-items: center;
 }
-.about-media img {
+
+/* Contenitore media per l'embed */
+.about-media {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+
+.about-media .instagram-embed-card {
+  width: 100%;
+  max-width: 420px;
+  max-height: 520px; /* Limita l'altezza massima per non allungare la sezione */
+  overflow-y: auto;  /* Permette lo scroll interno se il post è molto lungo */
+  background: var(--white);
   border-radius: var(--radius-lg);
   box-shadow: var(--shadow);
+  border: 1px solid var(--line);
 }
+
+.about-media blockquote.instagram-media {
+  margin: 0 !important;
+  min-width: 100% !important;
+}
+
+/* Margine compatto per le citazioni e la CTA */
 .quote-strip {
-  display: grid;
-  gap: 18px;
-  margin-top: 28px;
-  padding-top: 24px;
-  border-top: 1px solid var(--line);
+  margin-top: 18px;
+  padding-top: 16px;
+  gap: 12px;
 }
-.quote-strip blockquote { margin: 0; }
+
 .quote-strip p {
-  font-family: var(--font-display);
-  font-style: italic;
-  font-size: 1.15rem;
-  color: var(--wine-dark);
-  margin: 0;
+  font-size: 1.05rem; /* Leggermente più compatto */
+}
+
+.about-ig-cta {
+  margin-top: 20px;
 }
 
 /* ---------- Services ---------- */
