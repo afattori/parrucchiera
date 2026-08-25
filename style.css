@@ -286,22 +286,24 @@ p { margin: 0 0 1em; color: var(--ink-soft); }
 }
 
 .about-media .instagram-embed-card {
-  width: 100%;
-  max-width: 420px;
-  max-height: 520px; /* Limita l'altezza massima per non allungare la sezione */
-  overflow-y: auto;  /* Permette lo scroll interno se il post è molto lungo */
+  display: inline-block; /* Si stringe esattamente attorno all'embed */
+  width: auto;
+  max-width: 100%;
   background: var(--white);
   border-radius: var(--radius-lg);
   box-shadow: var(--shadow);
   border: 1px solid var(--line);
-  padding: 12px;
-  justify-content: center;
+  padding: 8px; /* Un piccolo bordo sottile e pulito attorno al post */
+  overflow: hidden; /* Rimuove le barre di scorrimento antiestetiche */
 }
 
-.about-media blockquote.instagram-media {
-  margin: 0 auto !important;
+.about-media blockquote.instagram-media,
+.about-media iframe.instagram-media {
+  margin: 0 !important;
+  padding: 0 !important;
+  box-shadow: none !important;
+  border: none !important;
   min-width: 100% !important;
-  width: 100% !important;
 }
 
 /* Margine compatto per le citazioni e la CTA */
