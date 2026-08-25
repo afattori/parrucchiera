@@ -43,6 +43,11 @@ document.addEventListener('DOMContentLoaded', () => {
     revealEls.forEach(el => observer.observe(el));
   }
 
+  /* ---------- Processa Embed Instagram se presente ---------- */
+  if (window.instgrm) {
+    window.instgrm.Embeds.process();
+  }
+
   /* ---------- Stato aperto/chiuso in base agli orari reali ---------- */
   // Orari del salone: 0 = domenica ... 6 = sabato. null = chiuso.
   const hours = {
