@@ -889,3 +889,56 @@ p { margin: 0 0 1em; color: var(--ink-soft); }
   .service-category-icon { flex-basis: 50px; width: 50px; height: 50px; border-radius: 16px; font-size: 1.6rem; }
 }
 
+/* ---------- Card Instagram senza metriche social ---------- */
+.instagram-card {
+  width: min(100%, 480px);
+  overflow: hidden;
+  border: 1px solid var(--line);
+  border-radius: var(--radius-lg);
+  background: var(--white);
+  box-shadow: var(--shadow);
+}
+.instagram-card-header {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 15px 17px;
+}
+.instagram-avatar {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  flex: 0 0 42px;
+  width: 42px;
+  height: 42px;
+  border: 2px solid var(--gold);
+  border-radius: 50%;
+  background: var(--wine);
+  color: var(--white);
+  font-family: var(--font-display);
+  font-size: 0.92rem;
+}
+.instagram-profile { display: flex; flex: 1; min-width: 0; flex-direction: column; line-height: 1.35; }
+.instagram-profile strong { overflow: hidden; color: var(--ink); font-size: 0.76rem; text-overflow: ellipsis; white-space: nowrap; }
+.instagram-profile span { color: var(--ink-soft); font-size: 0.7rem; }
+.instagram-mark { color: var(--wine); font-size: 1.45rem; }
+.instagram-card-media { display: block; overflow: hidden; aspect-ratio: 1 / 1; background: var(--cream-2); }
+.instagram-card-media img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 500ms ease;
+}
+.instagram-card-media:hover img { transform: scale(1.025); }
+.instagram-card-footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 18px;
+  padding: 16px 18px;
+  color: var(--ink-soft);
+  font-size: 0.78rem;
+}
+.instagram-card-footer a { color: var(--wine); font-weight: 700; }
+.instagram-card-footer a:hover { text-decoration: underline; }
+
