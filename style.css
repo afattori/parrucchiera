@@ -553,7 +553,8 @@ p { margin: 0 0 1em; color: var(--ink-soft); }
   .hero-grid, .about-grid, .hours-grid, .contact-grid {
     grid-template-columns: 1fr;
   }
-  .about-media { order: -1; }
+  .about-copy { order: -1; }
+  .about-media { order: 0; }
   .hero-media { max-width: 420px; margin: 0 auto; }
 }
 
