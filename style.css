@@ -871,7 +871,7 @@ p { margin: 0 0 1em; color: var(--ink-soft); }
   border-radius: 999px;
   background: var(--white);
   color: var(--wine-dark);
-  font-family: var(--font-display);
+  font-family: var(--font-body);
   font-size: 1.08rem;
   font-weight: 700;
   box-shadow: 0 10px 24px rgba(42, 36, 32, 0.15);
