@@ -1,26 +1,27 @@
 /* ==========================================================
    Lucia Cercolani Parrucchieri Estetica
-   Palette: crema caldo, bordeaux, ottone. Serif elegante + sans pulito.
+   Palette ispirata al sito di riferimento: avorio luminoso, bordeaux intenso,
+   rosa cipria e accenti champagne. Playfair Display + Montserrat.
    ========================================================== */
 
 :root {
-  --cream:      #FAF6F0;
-  --cream-2:    #F1E7DC;
-  --ink:        #2A2420;
-  --ink-soft:   #5C534B;
-  --wine:       #6E2A3A;
-  --wine-dark:  #521F2C;
-  --gold:       #B7935A;
-  --blush:      #E8D9CE;
-  --line:       #DDD2C4;
+  --cream:      #FBF8F6;
+  --cream-2:    #F6EFEC;
+  --ink:        #28211F;
+  --ink-soft:   #655B57;
+  --wine:       #7B1E43;
+  --wine-dark:  #5B1632;
+  --gold:       #B49A6A;
+  --blush:      #EFDCD8;
+  --line:       #E7DCD7;
   --white:      #FFFFFF;
 
-  --font-display: "Fraunces", Georgia, serif;
-  --font-body: "Manrope", -apple-system, BlinkMacSystemFont, sans-serif;
+  --font-display: "Playfair Display", Georgia, serif;
+  --font-body: "Montserrat", -apple-system, BlinkMacSystemFont, sans-serif;
 
   --radius: 6px;
   --radius-lg: 24px;
-  --shadow: 0 20px 45px -25px rgba(42, 36, 32, 0.35);
+  --shadow: 0 20px 45px -25px rgba(91, 22, 50, 0.28);
   --max-w: 1180px;
   --transition: 220ms ease;
 }
@@ -67,7 +68,7 @@ a { color: inherit; text-decoration: none; }
 
 h1, h2, h3 {
   font-family: var(--font-display);
-  font-weight: 500;
+  font-weight: 600;
   color: var(--wine-dark);
   line-height: 1.15;
   margin: 0 0 0.5em;
@@ -106,7 +107,9 @@ p { margin: 0 0 1em; color: var(--ink-soft); }
   padding: 13px 24px;
   border-radius: 999px;
   font-weight: 700;
-  font-size: 0.95rem;
+  font-size: 0.82rem;
+  letter-spacing: 0.035em;
+  text-transform: uppercase;
   border: 1.5px solid transparent;
   transition: transform var(--transition), background var(--transition), color var(--transition), border-color var(--transition);
   white-space: nowrap;
@@ -129,7 +132,7 @@ p { margin: 0 0 1em; color: var(--ink-soft); }
   position: sticky;
   top: 0;
   z-index: 100;
-  background: rgba(250, 246, 240, 0.9);
+  background: rgba(251, 248, 246, 0.94);
   backdrop-filter: blur(10px);
   border-bottom: 1px solid var(--line);
 }
@@ -589,3 +592,4 @@ p { margin: 0 0 1em; color: var(--ink-soft); }
   .hero { padding: 48px 0 40px; }
   .hero-badge { width: 88px; height: 88px; left: -10px; }
 }
+
