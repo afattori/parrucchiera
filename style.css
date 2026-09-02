@@ -959,103 +959,64 @@ p { margin: 0 0 1em; color: var(--ink-soft); }
 
 
 
-/* ---------- Hair Spa ---------- */
-.hair-spa {
-  position: relative;
-  overflow: hidden;
-  background: linear-gradient(145deg, #f4ece7 0%, #fbf8f6 58%, #efe4df 100%);
-}
-.hair-spa::before {
-  content: "";
-  position: absolute;
-  width: 360px;
-  height: 360px;
-  top: -160px;
-  right: -100px;
-  border: 1px solid rgba(180, 154, 106, 0.28);
-  border-radius: 50%;
-}
-.hair-spa-grid {
+/* ---------- Hair Spa: servizio in evidenza ---------- */
+.hair-spa-feature {
   display: grid;
-  grid-template-columns: minmax(0, 0.88fr) minmax(0, 1.12fr);
-  gap: clamp(42px, 7vw, 86px);
+  grid-template-columns: 260px minmax(0, 1fr);
+  gap: clamp(28px, 4vw, 52px);
   align-items: center;
+  margin-top: 42px;
+  padding: 28px;
+  border: 1px solid var(--line);
+  border-radius: 24px;
+  background: linear-gradient(135deg, rgba(246, 239, 236, 0.95), rgba(255, 255, 255, 0.82));
+  box-shadow: 0 16px 34px -28px rgba(91, 22, 50, 0.55);
 }
 .hair-spa-media {
-  position: relative;
   overflow: hidden;
-  min-height: 620px;
-  border-radius: 48% 48% 24px 24px / 22% 22% 24px 24px;
-  box-shadow: var(--shadow), 0 0 0 1px rgba(180, 154, 106, 0.45);
+  aspect-ratio: 4 / 5;
+  border-radius: 18px;
+  background: var(--cream-2);
 }
 .hair-spa-media img {
   width: 100%;
   height: 100%;
-  position: absolute;
-  inset: 0;
   object-fit: cover;
 }
-.hair-spa-badge {
-  position: absolute;
-  left: 24px;
-  bottom: 24px;
-  padding: 10px 18px;
-  border-radius: 999px;
-  background: rgba(251, 248, 246, 0.92);
-  color: var(--wine-dark);
-  font-size: 0.75rem;
-  font-weight: 700;
-  letter-spacing: 0.09em;
-  text-transform: uppercase;
-  backdrop-filter: blur(8px);
+.hair-spa-copy .eyebrow { margin-bottom: 8px; }
+.hair-spa-copy h3 {
+  margin-bottom: 12px;
+  font-size: clamp(1.45rem, 2.5vw, 2rem);
 }
-.hair-spa-copy { position: relative; }
-.hair-spa-copy h2 { max-width: 680px; }
-.hair-spa-lead { max-width: 66ch; font-size: 1.06rem; }
-.hair-spa-steps {
+.hair-spa-copy > p:not(.eyebrow) { max-width: 68ch; }
+.hair-spa-details {
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
-  gap: 14px;
-  margin: 32px 0 36px;
+  gap: 8px 24px;
+  margin: 20px 0 0;
   padding: 0;
   list-style: none;
 }
-.hair-spa-steps li {
-  display: grid;
-  grid-template-columns: 42px 1fr;
-  gap: 2px 13px;
-  align-items: center;
-  padding: 18px;
-  border: 1px solid var(--line);
-  border-radius: 18px;
-  background: rgba(255, 255, 255, 0.72);
+.hair-spa-details li {
+  position: relative;
+  padding-left: 20px;
+  color: var(--ink-soft);
+  font-size: 0.88rem;
 }
-.hair-spa-steps li > span {
-  grid-row: 1 / 3;
-  display: grid;
-  place-items: center;
-  width: 42px;
-  height: 42px;
-  border-radius: 50%;
-  background: var(--wine);
-  color: var(--white);
-  font-size: 0.72rem;
-  font-weight: 700;
+.hair-spa-details li::before {
+  content: "✦";
+  position: absolute;
+  left: 0;
+  color: var(--gold);
 }
-.hair-spa-steps strong { color: var(--wine-dark); font-family: var(--font-display); font-size: 1.02rem; }
-.hair-spa-steps small { color: var(--ink-soft); line-height: 1.45; }
-.hair-spa-cta { display: flex; align-items: center; gap: 20px; flex-wrap: wrap; }
-.hair-spa-cta p { margin: 0; font-size: 0.78rem; }
 .service-list a { color: var(--wine); font-weight: 700; }
 .service-list a:hover { text-decoration: underline; }
 
-@media (max-width: 900px) {
-  .hair-spa-grid { grid-template-columns: 1fr; }
-  .hair-spa-media { width: min(100%, 520px); min-height: 560px; margin: 0 auto; }
+@media (max-width: 720px) {
+  .hair-spa-feature { grid-template-columns: 150px minmax(0, 1fr); gap: 22px; padding: 20px; }
+  .hair-spa-details { grid-template-columns: 1fr; }
 }
-@media (max-width: 560px) {
-  .hair-spa-media { min-height: 440px; border-radius: 40% 40% 20px 20px / 14% 14% 20px 20px; }
-  .hair-spa-steps { grid-template-columns: 1fr; }
-  .hair-spa-cta { align-items: stretch; flex-direction: column; }
-  .hair-spa-cta .btn { width: 100%; white-space: normal; }
+@media (max-width: 520px) {
+  .hair-spa-feature { grid-template-columns: 1fr; }
+  .hair-spa-media { width: 150px; }
 }
